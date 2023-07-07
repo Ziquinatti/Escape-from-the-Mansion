@@ -52,4 +52,16 @@ public class PlayerController : MonoBehaviour
             );
         }
     }
+
+    private void OnTriggerStay(Collider collider)
+    {
+        Interactable item;
+        collider.gameObject.TryGetComponent<Interactable>(out item);
+
+        if(item != null)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+                item.Interact();
+        }
+    }
 }
