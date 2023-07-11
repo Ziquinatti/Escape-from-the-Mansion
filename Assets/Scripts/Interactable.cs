@@ -11,6 +11,7 @@ public abstract class Interactable : MonoBehaviour
 {
     public bool isInteracting;
     public ObjectType objectType;
+    public float waitTime = 3f;
 
     public abstract void Interact();
 }
